@@ -10,11 +10,11 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
       - name: Unzip
-        run: unzip AppAppel.zip
+        run: unzip AppAppel2-4.zip
       - name: Build
-        run: cd AppAppel && chmod +x gradlew && ./gradlew assembleDebug
+        run: cd AppAppel2 && chmod +x gradlew && ./gradlew assembleDebug
       - name: Upload
         uses: actions/upload-artifact@v4
         with:
-          name: AppAppel-debug
-          path: AppAppel/app/build/outputs/apk/debug/app-debug.apk
+          name: AppAppel2-debug
+          path: AppAppel2/app/build/outputs/apk/debug/app-debug.apk
